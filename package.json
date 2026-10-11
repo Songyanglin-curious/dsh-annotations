@@ -1,0 +1,65 @@
+{
+  "name": "@songyanglin/dsh-annotations",
+  "description": "为 DSH 提供可精确锚定来源的通用行内批注",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/host/index.js",
+  "types": "dist/types/host/index.d.ts",
+  "exports": {
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./client": "./dist/client/index.js",
+    "./contract": {
+      "types": "./dist/types/contract.d.ts",
+      "default": "./dist/contract.js"
+    },
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/types/host/index.d.ts",
+      "default": "./dist/host/index.js"
+    }
+  },
+  "files": ["dist", "cordis.patch.yml", "README.md", "LICENSE"],
+  "license": "MIT",
+  "author": "songyanglin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Songyanglin-curious/dsh-annotations.git"
+  },
+  "keywords": ["dsh", "dsh-plugin", "annotation", "inline-comment", "deepseek-harness"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "prepack": "pnpm check && pnpm test && pnpm build"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-input-trigger",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "4.0.4"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.4",
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "esbuild": "^0.25.0",
+    "jsdom": "^30.0.1",
+    "react": "^19.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  },
+  "engines": { "node": ">=24.0.0" },
+  "packageManager": "pnpm@11.25.0"
+}

@@ -1,0 +1,14 @@
+[data-annotations-menu],[data-annotations-editor]{position:fixed;z-index:10000;font:13px/1.5 system-ui,sans-serif;color:#1f2328;background:#fff;border:1px solid #d8dee8;border-radius:8px;box-shadow:0 8px 28px rgba(20,30,50,.16)}
+[data-annotations-menu]{padding:3px}
+[data-annotations-quick]{height:30px;padding:0 9px;border:0;border-radius:6px;background:transparent;display:flex;align-items:center;gap:6px;cursor:pointer;color:#315fbd;font:inherit}
+[data-annotations-quick]:hover{background:#eef4ff}
+[data-annotations-quick] svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round}
+[data-annotations-editor]{padding:10px;width:320px;display:flex;flex-direction:column;gap:8px}
+[data-annotations-editor] small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#687386}
+[data-annotations-editor] textarea{box-sizing:border-box;width:100%;min-height:78px;resize:vertical;border:1px solid #ccd4e0;border-radius:6px;padding:8px;font:inherit}
+[data-annotations-editor] footer{display:flex;justify-content:flex-end;gap:8px}
+[data-annotations-editor] button{border:1px solid #ccd4e0;border-radius:6px;background:#fff;padding:5px 10px;cursor:pointer}
+[data-annotations-editor] button[type=submit]{background:#316fea;color:#fff;border-color:#316fea}
+[data-annotations-editor] button:disabled{opacity:.45;cursor:default}
+[data-annotations-dock]{box-sizing:border-box;max-width:var(--dsh-composer-card-max-width,920px);margin:0 auto;padding:8px 12px;border:1px solid #dfe5ef;border-radius:10px;background:#fbfcff;font:12px/1.45 system-ui,sans-serif}
+.annotations-heading{color:#687386;margin-bottom:6px}.annotations-row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:6px;align-items:center;padding:6px 0;border-top:1px solid #edf0f5}.annotations-source{display:block;color:#526174}.annotations-quote{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.annotations-comment{display:block;color:#687386}.annotations-row button{border:0;background:transparent;cursor:pointer}.annotations-edit{grid-column:1/-1}.annotations-edit textarea{box-sizing:border-box;width:100%}.annotations-edit div{display:flex;justify-content:flex-end;gap:6px}

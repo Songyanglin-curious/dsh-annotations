@@ -1,0 +1,4 @@
+# DSH 通用批注插件。
+- insert:
+    - id: annotations
+      name: '@songyanglin/dsh-annotations'
